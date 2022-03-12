@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 
 function Restaurants() {
   const restaurants = useSelector((state) => state.restaurants);
-
+  console.log(restaurants);
   return (
     <div>
       <ul>
-        {restaurants.map((restaurant) => (
+        {restaurants?.map((restaurant) => (
           <li key={restaurant.name}>{restaurant.name}</li>
         ))}
       </ul>
